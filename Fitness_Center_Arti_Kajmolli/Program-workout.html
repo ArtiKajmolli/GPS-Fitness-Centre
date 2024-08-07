@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Workout program</title>
+        <link rel="stylesheet" href="Program-Workout.css">
+        <script src="Program-workout.js"></script>
+    </head>
+
+    <body>
+        <div id="home">
+            <div class="header">
+                <h1>Project: Fitness Centre <br/><span id="page">Home</span></h1>
+            </div>
+        <div id="content" value="content">
+            <input type="button" class="modes" id="fitnessApp" value="GPS Fitness App" onclick="fitnessTrackerGO()"/></br>
+            <input type="button" class="modes" id="RPMcalculatorGO" value="calculate RPM" onclick="RPMCalcGo()"></br>
+            <input type="button" class="modes" id="BMIcalculatorGO" Value="Calculate BMI" onclick="BMICalculatorGo()"></br>
+        </div>
+
+        <div id="RPMcalculator" value="content">
+        <select id="dropdown" value="Pick exercise">
+            <option id="Benchpress" value="Bench Press">Bench Press</option>
+            <option id="squat" value="Squat">Squat</option>
+            <option id="deadlift" value="Deadlift">Deadlift</option> 
+        </select></br>
+        <input type="text" type="number" id="weight" value="weight(lbs)">
+        <input type="text" id="reps" value="reps">
+        <input type="text" id="bodyweight" value="bodyweight(Ibs)">
+        <input type="button" class="modes" id="calculate" value="calculate" onclick="personalrec()"></br>
+        <p id="text"></p>
+        <h2 id="exercise"></h2>
+        <h3 id="userLift"></h3>
+        <img src="images/star_rating/just started.jpg" id="imageStar">
+        <h3 id="ratioBW"></h3></br>
+        <input type="button" class="modes" id="back" value="back" onclick="RPMCalcBack()">
+        </div>
+    
+    <div id="fitnessTracker">
+        <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz5QPGfSdsDZIRdNaUMAS5erWFrFx37Ew&callback=addGoogleMap&v=weekly"
+        async></script>
+        <hr/>
+        <p id="output">Speed: <br>Accuracy: <br>Distance: <br> Count: </p>
+        <input type="button" class="modes" value="start Tracking" id="startTracking" onclick="startTrackingRun()"/>
+        <input type="button" class="modes" value="stop tracking" id="stopTracking" onclick="stopWatchingPosition()"/><br/>
+        <input type="button" class="modes" value="hide" id="hide" onclick="hideMarker()"/>
+        <input type="button" class="modes" value="show" id="show" onclick="showMarker()"/><br/>
+        <input type="button" class="modes" value="Reset" id="resetTracking" onclick="resetTracking()"/><br/>
+
+        <h3>Steps to use the GPS</h3>
+        <div id="instructions">
+            <ol>
+                <li>Open application and move to start position</li>
+                <li>Click on map to add marker, then drag marker to mark your destination(s)</li>
+                <li>Press Start button to Start Run</li>
+                <li>Press Stop button to stop tracking</li>
+            </ol>
+        <input type="button" class="modes" value="back" id="back" onclick="fitnessTrackerBack()">
+    </div></div>
+    
+    <div id="BMICalculator">
+        <p class="BMIinput">Your Height:</p>
+        <input type="number" id="feet"><p>ft   </p>
+        <input type="number" id="inches"><p>inches</p><br>
+        <p class="BMIinput">Your Weight:</p>
+        <input type="number" id="weightBMI">
+        <select id="dropdownBMI" value="select unit">
+            <option id="pounds" value="pounds">Pounds (Ibs)</option>
+            <option id="kilo" value="kilograms">Kilograms (kg)</option>
+        </select><br/>
+        <p id="outputBMI"></p><br>
+        <input type="button" class="modes" value="back" id="back" onclick="BMICalculatorBack()">
+        <input type="button" class="modes" value="Calculate" id="BMICalc" onclick="BMICalculator()">
+    </div>
+    </div>
+    </body>
+</html>

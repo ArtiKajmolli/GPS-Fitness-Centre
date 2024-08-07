@@ -1,0 +1,84 @@
+/* home page */
+body {
+    text-align: center;
+    background-color: blue;
+    background-image: url(images/GymBackground.jpg);
+    background-position: center;
+    background-size:cover;
+}
+
+#home{
+    background-color: ivory;
+    border: 5px solid red;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.header {
+    color:blue;
+    border: 5px solid red;
+}
+
+.modes{
+    border-radius: 25px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.modes:hover{
+    background-color: blue;
+    color:red;
+}
+
+h1 {
+    text-align: center;
+}
+
+#back{
+    margin:5px;
+}
+/* RPM Calculator */
+#RPMcalculator {
+    display:none
+}
+
+#dropdown{
+    margin: 5px;
+}
+
+#imageStar{
+    display: none;
+    height: 100px;
+    width:400px;
+}
+
+/*bmi calc*/
+
+#BMICalculator{
+    display:none;
+}
+
+#BMICalculator p{
+    display: inline-block;
+}
+
+.BMIinput{
+    font-weight: bold;
+}
+
+/* Fitness Tracker */
+#fitnessTracker{
+    display:none;
+}
+
+#map{
+    height: 400px;
+    width: 500px;
+    border: 5px solid red;
+    margin:auto;
+}
+
+#instructions{
+    text-align: left;
+    margin-left: 35%;
+}
